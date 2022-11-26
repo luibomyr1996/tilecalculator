@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>test</p>
+    <canvas id="platform" width=1000 height=800>
+       
+    </canvas>
+    <!-- <svg style="height: 100px; width: 100px; position: absolute; top: 60px; left: 10px;" id="test" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    </svg> -->
+    <canvas id="tile" width=200 height=200></canvas>
+   
+    <!-- test -->
+    <span style="top: 0px; left: 800px">x</span>
+    <span style="top: 600px; left: 0px">y</span>
+    <!-- test -->
+
+    <br/>
+    <button id="clear">Clear Canvas</button>
+    <button id="next" onclick="flatAndTileIsReady()">Next after tile and flat is ready</button>
+    <button id="setTile" onclick="setTile()">Set tile</button>
+    <button id="setTile" onclick="calculateArea()">Calculate Area</button>
+    <button id="setTile" onclick="drawTilesOnFlat()">DrawTiles</button>
+
+    <span id="tooltip"></span>
+    <span id="tileTooltip"></span>
+    <span id="tileTooltip2"></span>
+
+    <p> 1. Draw your flat / Area to cover</p>
+    <p> 2. Draw tile</p>
+    <p> 3. Move tile to flat. Specify where tile covering should be started</p>
+    <p> 4. Calculate </p>
+    <p> 5. Show/Visualize results of calculations: How many tile, cost and so on </p>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/konva@8.3.2/konva.min.js"></script>
+
+    <script src="Point.js"></script>
+    <script src="Line.js"></script>
+    <script src="platform.js"></script>
+    <script src="tile.js"></script>
+    <script src="utils.js"></script>
+
+    <!-- svg grid -->
+    <!-- <script>
+        function LoopTest() {
+var i=0;
+var stop=5;
+for (i=0;i<500;i++) {  
+//  var v = document.createElement('line');
+// v.x1 = i;
+// v.x2 = i+19;
+// v.y1 = i + 2;
+// v.y2 = i+10;
+// v.stroke = "black";
+//  document.getElementById('test').append(v);
+var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
+    newLine.setAttribute('id','line2');
+    newLine.setAttribute('x1','0');
+    newLine.setAttribute('y1','0');
+    newLine.setAttribute('x2', i + 10);
+    newLine.setAttribute('y2','20');
+    newLine.setAttribute('stroke', 'black');
+    $("#test").append(newLine);
+}
+}
+//LoopTest();
+    </script> -->
+
+</body>
+
+</html>
